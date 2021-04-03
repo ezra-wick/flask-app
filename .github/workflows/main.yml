@@ -23,8 +23,9 @@ jobs:
       run: flake8 .
 
     - name: Test with pytest
-      working-directory: /home/runner/work/flask-app
-      run: pytest tests.py 
+      run: |
+        cd flask-app
+        pytest tests.py 
     
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
