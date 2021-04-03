@@ -11,7 +11,7 @@ jobs:
     - name: Set up Python 
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 3.9
 
     - name: Install dependencies
       run: |
@@ -24,7 +24,7 @@ jobs:
 
     - name: Test with pytest
       run: |
-        cd /home/runner/work/flask-app
+        cd /home/runner/work
         pytest tests.py 
     
   build_and_push_to_docker_hub:
