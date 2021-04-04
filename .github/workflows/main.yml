@@ -54,7 +54,6 @@ jobs:
        key: ${{ secrets.SSH_KEY }}
        passphrase: ${{ secrets.PASSPHRASE }}
        script: |
-         sudo curl -sSL http://getdocker/ | sh
          sudo apt-get update && apt-get upgrade
          sudo usermod -aG docker user
          sudo apt-get install docker.io
