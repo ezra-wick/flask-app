@@ -55,7 +55,6 @@ jobs:
        passphrase: ${{ secrets.PASSPHRASE }}
        script: |
          sudo apt-get update && apt-get upgrade
-         sudo usermod -aG docker user
          sudo apt-get install docker.io
          sudo docker pull ezrawick/flask:latest
          sudo docker stop $(sudo docker ps -a -q)
