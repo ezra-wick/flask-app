@@ -56,3 +56,4 @@ jobs:
          sudo docker pull ezrawick/flask:latest
          sudo docker stop $(sudo docker ps -a -q)
          sudo docker run --rm -d -p 5000:5000 ezrawick/flask:latest
+
